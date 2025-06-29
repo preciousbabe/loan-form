@@ -1,52 +1,65 @@
- const pages = document.querySelectorAll('.form-page');
-    let currentPage = 0;
+// Multi-page form navigation
+const pages = document.querySelectorAll(".form-page");
+let currentPage = 0;
 
-    function showPage(index) {
-      pages.forEach((page, i) => {
-        page.classList.toggle('active', i === index);
-      });
+function showPage(index) {
+  pages.forEach((page, i) => {
+    page.classList.toggle("active", i === index);
+  });
+}
+
+document.querySelectorAll(".next-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    if (currentPage < pages.length - 1) {
+      currentPage++;
+      showPage(currentPage);
     }
+  });
+});
 
-    document.querySelectorAll('.next-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        currentPage = Math.min(currentPage + 1, pages.length - 1);
-        showPage(currentPage);
-      });
-    });
+document.querySelectorAll(".prev-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    if (currentPage > 0) {
+      currentPage--;
+      showPage(currentPage);
+    }
+  });
+});
 
-    document.querySelectorAll('.prev-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        currentPage = Math.max(currentPage - 1, 0);
-        showPage(currentPage);
-      });
-    });
+// Form submit → WhatsApp message
+document.getElementById("whatsappForm").addEventListener("submit", function (e) {
+  e.preventDefault();
 
-    document.getElementById("whatsappForm").addEventListener("submit", function (e) {
-      e.preventDefault();
+  // Gather all inputs
+  const inputs = document.querySelectorAll("input, select, textarea");
+  const formData = {};
 
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const location = document.getElementById("location").value;
-      const propertyType = document.getElementById("propertyType").value;
-      const message = document.getElementById("message").value;
+  inputs.forEach(input => {
+    if (input.type === "checkbox") {
+      if (input.checked) {
+        if (!formData[input.name]) {
+          formData[input.name] = [];
+        }
+        formData[input.name].push(input.value);
+      }
+    } else {
+      const key = input.labels?.[0]?.innerText || input.name || input.id;
+      formData[key] = input.value;
+    }
+  });
 
-      const interests = [];
-      document.querySelectorAll("input[name='interests']:checked").forEach((cb) => {
-        interests.push(cb.value);
-      });
+  // Build WhatsApp message
+  let message = "*New Real Estate Loan Application*\n\n";
+  for (let key in formData) {
+    const value = Array.isArray(formData[key]) ? formData[key].join(", ") : formData[key];
+    message += `*${key}:* ${value}\n`;
+  }
 
-      const phoneNumber = "2348012345678";
-      const fullMessage = `Hello, I'm interested in your real estate offer. Here are my details:
+  const encodedMessage = encodeURIComponent(message);
 
-Full Name: ${name}
-Email: ${email}
-Location: ${location}
-Property Type: ${propertyType}
-Interests: ${interests.join(", ")}
-Message: ${message}
+  // Replace with your business WhatsApp number (without +)
+  const phoneNumber = "2348139597474";
 
-I will send my NIN or required documents shortly.`;
-
-      const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(fullMessage)}`;
-      window.open(whatsappURL, "_blank");
-    });
+  // Open WhatsApp chat
+  window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
+});
