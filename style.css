@@ -1,0 +1,114 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  padding: 30px;
+}
+
+form {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+label{
+    margin-top: 20px;
+}
+
+form > .form-group > label {
+  margin-top: 15px;
+  display: block;
+  font-weight: 600;
+  color: #333;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.section-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #333;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column; 
+  gap: 6px;
+  align-items: flex-start; 
+}
+
+.checkbox-option {
+  display: inline-flex;               
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  white-space: nowrap;  
+  margin-top: 5px;            
+}
+
+.checkbox-option input[type="checkbox"] {
+  margin: 0;
+  transform: scale(1.2);
+  accent-color: #25D366;
+}
+
+.btn-group {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+button {
+  flex: 1;
+  padding: 12px;
+  background-color: #25D366;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #1ebe5d;
+}
+
+.form-page {
+  display: none;
+}
+
+.form-page.active {
+  display: block;
+}
+
+input:focus {
+  outline: none;
+}
+
+textarea:focus {
+  outline: none;
+}

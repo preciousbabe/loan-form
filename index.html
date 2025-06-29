@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Real Estate WhatsApp Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <form id="whatsappForm">
+    <div class="form-page active" id="page1">
+      <h2>Company Information</h2>
+      <label for="name">Company Name</label>
+      <input type="text" id="name" required />
+
+      <label for="name">Company Address</label>
+      <input type="text" id="name" required />
+
+      <label for="name">CAC Reg Number</label>
+      <input type="text" id="name" required />
+
+      <label for="name">CAC Reg Date</label>
+      <input type="text" id="name" required />
+
+      <label for="name">Company Website (If Any)</label>
+      <input type="text" id="name" required />
+
+      <label for="name">Company Email (If Any)</label>
+      <input type="email" id="email" required />
+
+      <label for="name">Tax Identification Number (TIN)</label>
+      <input type="text" id="name" required />
+
+      <label for="propertyType">Sector/ industry</label>
+      <select id="propertyType" required>
+        <option value="">-- Select --</option>
+        <option value="Agriculture">Agriculture</option>
+        <option value="Military"> Military</option>
+        <option value="Retail/ Sales (FMCG)"> Retail/ Sales (FMCG)</option>
+        <option value="Construction"> Construction</option>
+        <option value="Telecommunication"> Telecommunication</option>
+        <option value="Oil and Gas"> Oil and Gas</option>
+        <option value="Health/Education/ Govt"> Health/Education/ Govt</option>
+        <option value="Real Estate"> Real Estate</option>
+        <option value="Power"> Power</option>
+        <option value="Manufacturing"> Manufacturing</option>
+        <option value="Media/ Entertainment"> Media/ Entertainment</option>
+        <option value="Service"> Service</option>
+        <option value="Professional, scientific and technical activities"> Professional, scientific and technical activities</option>
+        <option value="Industrial Goods"> Industrial Goods</option>
+        <option value="Utility"> Utility</option>
+        <option value="Arts, entertainment and recreation"> Arts, entertainment and recreation</option>
+        <option value="Transportation and storage"> Transportation and storage</option>
+        <option value="Wholesale and Retail"> Wholesale and Retail</option>
+        <option value="Consumer Goods"> Consumer Goods</option>
+        <option value="Finance"> Finance</option>
+        <option value="General"> General</option>
+        <option value="Online activities"> Online activities</option>
+        <option value="Administrative and support service activities"> Administrative and support service activities</option>
+        <option value="Extraterritorial Organization"> Extraterritorial Organization </option>
+        <option value="Other"> Other</option> 
+      </select>
+
+      <div class="form-group">
+  <label for="message">Tell Us About Your Business</label>
+  <textarea id="message" name="message" rows="5"></textarea>
+</div>
+
+
+      <div class="btn-group">
+        <button type="button" class="next-btn">Next</button>
+      </div>
+
+    </div>
+
+    <!-- page 2 -->
+      <div class="form-page" id="page2">
+      <h2>Applicant's personal Information</h2>
+      <label for="name">Your BVN</label>
+      <input type="text" id="name" required />
+
+       <label for="name">Your First Name</label>
+      <input type="text" id="name" required />
+
+       <label for="name">Your Last Name</label>
+      <input type="text" id="name" required />
+
+       <label for="name">Other Names</label>
+      <input type="text" id="name" required />
+
+   <div class="form-group">
+  <div class="section-title">Gender</div>
+  <div class="checkbox-group">
+    <label class="checkbox-option">
+      <input type="checkbox" name="gender" value="male">
+      Male
+    </label>
+    <label class="checkbox-option">
+      <input type="checkbox" name="gender" value="female">
+      Female
+    </label>
+  </div>
+</div>
+
+        <label for="pnumber">Your Phone Number</label>
+      <input type="Text" id="pnumber" required />
+
+      <label for="name">Your Email Address</label>
+      <input type="email" id="email" required />
+
+       <label for="employmentStatus">Employment Status</label>
+      <select id="employmentStatus" required>
+        <option value="">-- Select --</option>
+        <option value="Self-employed">Self-Employed</option>
+        <option value="Employed">Employed</option>
+        </select>
+
+         <label for="DOB">Date Of Birth</label>
+         <input type="text" id="DOB" required />
+
+        <label for="maritalStatus">Marital Status</label>
+        <select id="maritalStatus" required>
+        <option value="">-- Select --</option>
+        <option value="Married">Married</option>
+        <option value="Single">Single</option>
+        <option value="Divorced">Divorced</option>
+        <option value="Widowed">Widowed</option>
+        </select>
+
+        <label for="NOD">Number Of Dependants</label>
+         <input type="text" id="NOD" required />
+
+         <label for="NOC">Number Of Children</label>
+         <input type="text" id="NOC" required />
+
+         <label for="monthlyIncome">Monthly Income ( Average)</label>
+         <input type="text" id="monthlyIncome" required />
+
+        <label for="educationalLevel">Educational Level</label>
+        <select id="educationalLevel" required>
+        <option value="">-- Select --</option>
+        <option value="Primary">Primary</option>
+        <option value="Secondary">Secondary</option>
+        <option value="Graduate">Graduate</option>
+        <option value="Post-Graduate">Post-Graduate</option>
+        </select>
+
+        <label for="homeAddress">Home Address</label>
+         <input type="text" id="homeAddress" required />
+
+          <label for="State">State of residence</label>
+         <input type="text" id="State" required />
+
+            <label for="DOR">Date when you moved into the Residence</label>
+            <input type="text" id="DOR" required />
+
+        <label for="residentialStatus">Residential Status</label>
+        <select id="residentialStatus" required>
+        <option value="">-- Select --</option>
+        <option value="Primary">Owner</option>
+        <option value="Secondary">Renting</option>
+        <option value="Graduate">With Relative</option>
+        <option value="Post-Graduate">With Friend</option>
+        </select>
+
+         <label for="NOK">Next Of Kin</label>
+         <input type="text" id="NOK" required />
+
+          <label for="NOKPN">Next Of Kin Phone Number</label>
+         <input type="text" id="NOKPN" required />
+
+        <label for="NOKR">Next Of Kin Relationship</label>
+        <select id="NOKR" required>
+        <option value="">-- Select --</option>
+        <option value="Spouse">Spouse</option>
+        <option value="Sibling">Sibling</option>
+        <option value="Parent">Parent</option>
+        <option value="Child">Child</option>
+        </select>
+
+         <label for="MOI">Means Of Identification</label>
+        <select id="MOI" required>
+        <option value="">-- Select --</option>
+        <option value="NIN">NIN</option>
+        <option value="Voters Card">Voters Card</option>
+        <option value="International-Passport">International Passport</option>
+        <option value="Drivers-Licence">Drivers Licence</option>
+        </select>
+
+         <div class="btn-group">
+        <button type="button" class="prev-btn">Previous</button>
+        <button type="button" class="next-btn">Next</button>
+      </div>
+
+     </div>
+
+
+      <!-- page 3 -->
+      <div class="form-page" id="page3">
+      <h2>Loan Information</h2>
+
+      <label for="productType">Product Type</label>
+        <select id="productType" required>
+        <option value="">-- Select --</option>
+        <option value="businessLoan">Business Loan</option>
+        <option value="Asset Finance">Asset Finance</option>
+        <option value="localPurchaseOrder">Local Purchase Order</option>
+        <option value="inventoryFinance">Inventory Finance</option>
+        <option value="invoiceDiscounting">Invoice Discounting</option>
+        <option value="workingCapital">Working Capital</option>
+        </select>
+
+        <label for="loanAmount">Loan Amount Requested</label>
+       <input type="text" id="loanAmount" required />
+
+      <label for="loanDuration">Loan Duration</label>
+      <input type="text" id="loanDuration" required />
+
+      <div class="form-group">
+      <div class="section-title">Loan Purpose</div>
+      <div class="checkbox-group">
+      <label class="checkbox-option">
+      <input type="checkbox" name="loan-purpose" value="business-expansion">
+      Business expansion
+      </label>
+      <label class="checkbox-option">
+      <input type="checkbox" name="loan-purpose" value="working-capital">
+      Working capital (cash flow)
+      </label>
+      <label class="checkbox-option">
+      <input type="checkbox" name="loan-purpose" value="equipment">
+      Equipment purchase/maintenance
+    </label>
+    <label class="checkbox-option">
+      <input type="checkbox" name="loan-purpose" value="inventory">
+      Inventory costs
+    </label>
+    <label class="checkbox-option">
+      <input type="checkbox" name="loan-purpose" value="rent">
+      Rent
+    </label>
+    <label class="checkbox-option">
+      <input type="checkbox" name="loan-purpose" value="business-project">
+      Business project
+    </label>
+    <label class="checkbox-option">
+      <input type="checkbox" name="loan-purpose" value="supply-goods">
+      Supply of goods
+    </label>
+    <label class="checkbox-option">
+      <input type="checkbox" name="loan-purpose" value="contract-fulfilment">
+      Contract fulfilment
+    </label>
+  </div>
+</div>
+
+   <div class="btn-group">
+        <button type="button" class="prev-btn">Previous</button>
+        <button type="button" class="next-btn">Next</button>
+      </div>
+
+      </div>
+
+       <!-- page 4 -->
+      <div class="form-page" id="page4">
+      <h2>APPLICANT'S BANK DETAILS</h2>
+
+       <label for="ApplicantBankName">Applicant's Bank Name</label>
+         <input type="text" id="ApplicantBankName" required />
+
+          <label for="accountNumber">Account Number</label>
+         <input type="text" id="accountNumber" required />
+
+          <label for="bankAlertPhoneNumber">Bank Alert Phone number</label>
+         <input type="text" id="bankAlertPhoneNumber" required />
+
+      <h2>Guarantors Information</h2>
+        <label for="name">Guarantor's Name</label>
+      <input type="text" id="name" required />
+
+       <label for="address">Guarantor's Address</label>
+      <input type="text" id="address" required />
+
+       <label for="BVN">Guarantor's BVN</label>
+      <input type="text" id="BVN" required />
+
+       <label for="Bname">Guarantor's Bank Name</label>
+      <input type="text" id="Bname" required />
+
+       <label for="GAN">Guarantor's Account Number</label>
+      <input type="text" id="GAN" required />
+
+       <label for="GPN">Guarantor's Bank alert phone number</label>
+      <input type="text" id="GPN" required />
+
+      <div class="btn-group">
+        <button type="button" class="prev-btn">Previous</button>
+        <button type="submit" class="submit-btn">Send via WhatsApp</button>
+      </div>
+    </div>
+  </form>
+
+  <script src="./script.js"></script>
+
+</body>
+</html>
