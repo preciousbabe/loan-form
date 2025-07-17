@@ -58,7 +58,7 @@ document.getElementById("whatsappForm").addEventListener("submit", function (e) 
   const encodedMessage = encodeURIComponent(message);
 
   // Replace with your business WhatsApp number (without +)
-  const phoneNumber = "2348139597474";
+  const phoneNumber = "2347060612038";
 
   // Open WhatsApp chat
   window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
